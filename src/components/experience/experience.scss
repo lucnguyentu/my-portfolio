@@ -1,0 +1,88 @@
+@import "../../index.scss";
+
+#experience {
+
+    .experience__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem; 
+
+        .experience__content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 2rem;
+
+            .experience__details {
+               display: flex;
+               gap: 1rem;
+
+               .experience__details-icon {
+                   margin-top: 6px;
+                   color: $color-primary;
+               }
+            }
+        }
+    }
+}
+
+.experience__container > div {
+    background-color: $color-bg-variant;
+    padding: 2.4rem 5rem;
+    border-radius: 2rem;
+    border: 1px solid #000;
+    transition: $transition;
+
+    &:hover {
+        background: transparent;
+        border-color: $color-primary-variant;
+        cursor: default;
+    }
+
+    h3 {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: $color-primary;
+    }
+}
+
+// ================= MEDIA QUERIES (MEDIUM DEVICES) ======================
+@media screen and (max-width: 1024px){
+    #experience {
+        margin-top: 15rem !important;
+        padding-top: 2rem;
+    }
+    
+    .experience__container {
+        grid-template-columns: 1fr !important;
+
+        .experience__content {
+            padding: 2rem;
+        }
+    }
+
+    .experience__container > div {
+        width: 80% !important;
+        padding: 2rem !important;
+        margin: 0 auto !important;
+    }
+}
+
+// ================= MEDIA QUERIES (SMALL DEVICES) ======================
+@media screen and (max-width: 600px){
+    #experience {
+        margin-top: 20rem !important;
+    }
+
+    .experience__container {
+        gap: 1rem;
+
+        .experience__content {
+            padding: 0 !important;
+        }
+    }
+
+    .experience__container > div {
+        width: 100% !important;
+        padding: 2rem 1rem;
+    }
+}

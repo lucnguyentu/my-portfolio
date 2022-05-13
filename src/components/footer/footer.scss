@@ -1,0 +1,72 @@
+@import "../../index.scss";
+
+footer {
+    background: $color-primary;
+    padding: 3rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 7rem;
+
+    a {
+        color: $color-bg;
+    }
+
+    .footer__logo {
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+        display: inline-block;
+    }
+
+    .permalinks {
+        @include flex-box;
+        gap: 2rem;
+        margin: 0 auto 3rem;
+    }
+
+    .footer__socials {
+        @include flex-box;
+        gap: 1rem;
+        margin-bottom: 4rem;
+
+        a {
+            background: $color-bg;
+            color: $color-white;
+            padding: 0.8rem;
+            border-radius: 0.7rem;
+            border: 1px solid transparent;
+            @include flex-box;
+            font-size: 1.2rem;
+
+            &:hover {
+                background: transparent;
+                color: $color-bg;
+                border-color: $color-bg;
+            }
+        }
+    }
+
+    .footer__copyright {
+        margin-bottom: 4rem;
+        color: $color-bg;
+    }
+}
+
+// ================= MEDIA QUERIES (MEDIUM DEVICES) ======================
+@media screen and (max-width: 1024px){
+    footer {
+        margin-top: 28rem;
+    }
+}
+
+// ================= MEDIA QUERIES (SMALL DEVICES) ======================
+@media screen and (max-width: 600px){
+    .permalinks {
+        flex-direction: column;
+        gap: 1.2rem!important;
+    }
+
+    .footer__socials {
+        margin-bottom: 2.6rem!important;
+    }
+}

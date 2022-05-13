@@ -1,0 +1,1 @@
+in the new version react, we don't have import React from 'react'
